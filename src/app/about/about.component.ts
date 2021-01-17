@@ -18,6 +18,7 @@ export class AboutComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.title = 'About';  // ทำครั้งเดียวนะ
   }
 
   go() {
