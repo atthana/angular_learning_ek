@@ -1,3 +1,4 @@
+import { useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -17,6 +18,12 @@ export class AboutComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  go() {
+    // alert('Hello Angular');
+    this.title = 'About Q-Electronics';
+    this.imgWidth = 600;
   }
 
 }
