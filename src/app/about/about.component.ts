@@ -19,6 +19,8 @@ export class AboutComponent implements OnInit {
     { name: 'Angular', price: 300},
     { name: 'Reac', price: 400},
   ];
+  myColor = 'yellow';
+  isActive = false;
 
   constructor() {
     this.age = 30;
@@ -34,6 +36,8 @@ export class AboutComponent implements OnInit {
     this.imgWidth = 600;
     // this.isShow = true;
     this.isShow = !this.isShow;
+    this.myColor = 'red';
+    this.isActive = true;
   }
 
 }
