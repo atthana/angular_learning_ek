@@ -1,16 +1,36 @@
 <section class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h3>เกี่ยวกับเรา</h3>
-      {{ title }} <br>
+      <h3>{{ title }}</h3>
+
+      <table class="table table-bordered">
+        <tr>
+          <th>ลำดับ</th>
+          <th>ชื่อคอร์ส</th>
+          <th>ราคา</th>
+        </tr>
+        <tr *ngFor="let course of courses; let i=index">
+          <td>{{ i+1 }}</td>
+          <td>{{ course.name }}</td>
+          <td>{{ course.price }}</td>
+        </tr>
+
+      </table>
+
+      <ul>
+        <li *ngFor="let user of users">
+          {{ user }}
+        </li>
+      </ul>
+
       อายุ : {{ age + 7 }} ปี <br>
       email : {{ info.email}}<br>
       <hr>
-      <p>
+      <p *ngIf="isShow" >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ex qui officiis eos, maiores laborum nulla a voluptate impedit deleniti illo repudiandae esse vero obcaecati accusantium totam facere? Dolore, libero?
       </p>
 
-      <img [src]="logo" [width]="imgWidth"><br><br>
+      <img *ngIf="isShow" [src]="logo" [width]="imgWidth"><br><br>
 
       <button type="button" class="btn btn-primary" (click)="go()">Click Me!</button>
 

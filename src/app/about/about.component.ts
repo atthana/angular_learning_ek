@@ -12,6 +12,13 @@ export class AboutComponent implements OnInit {
   info = { email: 'q@codium.co' };
   logo = './assets/images/logo.jpg';
   imgWidth = 300;
+  isShow = false;
+  users = ['John', 'Mary', 'Bob']
+  courses = [
+    { name: 'PHP', price: 200},
+    { name: 'Angular', price: 300},
+    { name: 'Reac', price: 400},
+  ];
 
   constructor() {
     this.age = 30;
@@ -25,6 +32,8 @@ export class AboutComponent implements OnInit {
     // alert('Hello Angular');
     this.title = 'About Q-Electronics';
     this.imgWidth = 600;
+    // this.isShow = true;
+    this.isShow = !this.isShow;
   }
 
 }
