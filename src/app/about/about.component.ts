@@ -1,5 +1,6 @@
 import { useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -22,12 +23,13 @@ export class AboutComponent implements OnInit {
   myColor = 'yellow';
   isActive = false;
 
-  constructor() {
+  constructor(private titleBar: Title) {
     this.age = 30;
    }
 
   ngOnInit(): void {
     this.title = 'About';  // ทำครั้งเดียวนะ
+    this.titleBar.setTitle('เกี่ยวกับเรา')
   }
 
   go() {
