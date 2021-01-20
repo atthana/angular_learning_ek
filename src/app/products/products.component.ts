@@ -8,7 +8,7 @@ import { Product } from './shared/product.model';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: Product[];
+  products: Product[] = [];
 
   constructor(private productService: ProductService) { }
 
